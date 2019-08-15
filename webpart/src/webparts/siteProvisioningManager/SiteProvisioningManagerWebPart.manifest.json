@@ -19,7 +19,7 @@
     "group": { "default": "Other" },
     "title": { "default": "Site Provisioning Manager" },
     "description": { "default": "Get or apply PnP provisioning templates" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "CustomizeToolbar",
     "properties": {
       "description": "Site Provisioning Manager"
     }
