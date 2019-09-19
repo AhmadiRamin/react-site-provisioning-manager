@@ -14,7 +14,7 @@ export default class AppService {
     constructor(private spfxContext: WebPartContext, 
                 private httpClient: AadHttpClient,
                 private getProvisioningTemplateUrl,
-                private applyProvisioningTemplateUrl) {
+                public applyProvisioningTemplateUrl) {
         // Setuo Context to PnPjs and MSGraph
         sp.setup({
             spfxContext: this.spfxContext
