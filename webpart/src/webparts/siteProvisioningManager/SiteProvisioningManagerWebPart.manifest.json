@@ -21,7 +21,9 @@
     "description": { "default": "Get or apply PnP provisioning templates" },
     "officeFabricIconFontName": "CustomizeToolbar",
     "properties": {
-      "description": "Site Provisioning Manager"
+      "ApplicationId": "367e75c1-a1ca-478c-a6ea-5221f89e5238",
+      "GetTemplateFunctionUrl": "https://site-provisioning-app.azurewebsites.net/api/GetProvisioningTemplate?code=D2AEAECknI8uVIItF8uQ18MaAezx22Jffus1lysxvbOauLSwgwSIDQ==",
+      "ApplyTemplateFunctionUrl": "https://site-provisioning-app.azurewebsites.net/api/ApplyProvisioningTemplate?code=OEWuTvnWHINO32/NLks7LaMH1go6SfnYBQavrZ2aW58401agkbsiZg=="
     }
   }]
 }

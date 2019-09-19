@@ -28,15 +28,18 @@ const App: React.FC<IAppProps> = (props) => {
 
   React.useEffect(()=>{
     let didCancel = false;
-
     const fetchIsGloablAdmin = async ()=>{
       const globalAdmin = await appService.checkUserIsGlobalAdmin();      
       if (!didCancel) {
         setIsGlobalAdmin(globalAdmin);
       }
-      
     };
-  
+    fetchIsGloablAdmin();
+    return ()=>{didCancel=true;};
+  },[]);
+
+  React.useEffect(()=>{
+    let didCancel = false;
     const fetchIsSiteOwner = async ()=>{
       const siteOwner = await appService.IsSiteOwner();
       if (!didCancel) {
@@ -50,10 +53,7 @@ const App: React.FC<IAppProps> = (props) => {
         }
       }
     };
-
-    fetchIsGloablAdmin();
     fetchIsSiteOwner();
-
     return ()=>{didCancel=true;};
   },[]);
 

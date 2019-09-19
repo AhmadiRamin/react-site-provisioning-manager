@@ -26,10 +26,13 @@ export default class SiteProvisioningManagerWebPart extends BaseClientSideWebPar
   public onInit(): Promise<void> {
     return super.onInit().then(async _ => {
       const { GetTemplateFunctionUrl, ApplyTemplateFunctionUrl } = this.properties;
-
+debugger;
       const clientId: string = this.properties.ApplicationId;
-      this.aadClient = await this.context.aadHttpClientFactory.getClient(clientId);
+      if(clientId){
+        this.aadClient = await this.context.aadHttpClientFactory.getClient(clientId);
       this.appService = new AppService(this.context, this.aadClient, GetTemplateFunctionUrl, ApplyTemplateFunctionUrl);
+      }
+      
     });
 
   }
