@@ -30,7 +30,7 @@ debugger;
       const clientId: string = this.properties.ApplicationId;
       if(clientId){
         this.aadClient = await this.context.aadHttpClientFactory.getClient(clientId);
-      this.appService = new AppService(this.context, this.aadClient, GetTemplateFunctionUrl, ApplyTemplateFunctionUrl);
+        this.appService = new AppService(this.context, this.aadClient, GetTemplateFunctionUrl, ApplyTemplateFunctionUrl);
       }
       
     });
